@@ -76,10 +76,10 @@ function RenderPlayMusic(indexMusic) {
 
   // chuyển tới bài hát tiếp theo
   nextBtn.onclick = function () {
-    indexSong >= arrSong.length ? (indexSong = 0) : indexSong++;
     if (isRandom) {
       randomMusic(indexSong);
     } else {
+      indexSong >= arrSong.length ? (indexSong = 0) : indexSong++;
       nextPrevSong(indexSong);
     }
   };
