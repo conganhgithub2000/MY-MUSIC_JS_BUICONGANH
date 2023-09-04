@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- my css -->
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="container navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+          <i class="fa-solid fa-music"></i>
+          <span>MUSIC</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon">
+            <i class="fa-solid fa-bars"></i>
+          </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">My Music</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0 navbar__search">
+            <input
+              class="form-control input__search"
+              type="search"
+              placeholder="Nhập bài hát cần nghe..."
+              aria-label="Search"
+            />
+            <button class="btn my-2 my-sm-0" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+          <div class="header__btn ml-4">
+            <button class="btn btn__login mr-3 ml-4">Log In</button>
+            <button class="btn btn__signup">Sign Up</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="content container">
+      <div class="row content__item">
+        <div class="col-6 content__item--playMusic">
+          <div class="item__playMusic--top">
+            <div class="playMusic__img">
+              <img src="/assets/img/Id072019-WN.jpg" id="img__music" alt="" />
+              <div class="title__name--song" id="titleNameSong"></div>
+            </div>
+            <div class="playMusic__start">
+              <div class="song-slider">
+                <span class="current-time mr-2">00:00</span>
+                <input type="range" name="song" class="slider" />
+                <audio src="/assets/audio/Id072019-WN.mp3" id="song"></audio>
+                <span class="song-duration ml-2">00:00</span>
+              </div>
+              <div class="songs__playItem">
+                <div class="songs__icons--left">
+                  <button class="btn p-1">
+                    <i class="fa-solid fa-ellipsis"></i>
+                  </button>
+                  <button class="btn p-1 btn__randomMusic">
+                    <i class="fa-solid fa-shuffle"></i>
+                  </button>
+                </div>
+                <div class="songs__play">
+                  <button class="btn p-1 play__back">
+                    <i class="fa-solid fa-backward-fast"></i>
+                  </button>
+                  <button class="btn p-1 btn__play">
+                    <i class="fa-solid fa-circle-play"></i>
+                  </button>
+                  <button class="btn p-1 play__forward">
+                    <i class="fa-solid fa-forward-fast"></i>
+                  </button>
+                </div>
+                <div class="songs__icons--right">
+                  <button class="btn p-1 btn__repeat">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                  </button>
+                  <button class="btn p-1 btn__favourites">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item__playMusic--bottom">
+            <div class="item__btnBottom">
+              <a class="btn" href=""><i class="fa-solid fa-radio"></i></a>
+              <p class="text-light">Radio</p>
+            </div>
+            <div class="item__btnBottom item__btnBottom--podcast">
+              <a class="btn" href=""><i class="fa-solid fa-microphone"></i></a>
+              <p class="text-light">Podcast</p>
+            </div>
+            <div class="item__btnBottom item__btnBottom--old">
+              <a class="btn" href=""><i class="fa-solid fa-sliders"></i></a>
+              <p class="text-light">90s Old</p>
+            </div>
+            <div class="item__btnBottom">
+              <a class="btn" href=""><i class="fa-brands fa-napster"></i></a>
+              <p class="text-light">Artist</p>
+            </div>
+            <div class="item__btnBottom item__btnBottom--lyrical">
+              <a class="btn" href=""
+                ><i class="fa-regular fa-rectangle-list"></i
+              ></a>
+              <p class="text-light">Lyrical</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-2 content__item--userMusic">
+          <div class="content__btn row">
+            <div class="col-lg-12 col-xl-6 content__btn--item">
+              <a class="btn" href="">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <p>Recent List</p>
+              </a>
+              <a class="btn mt-4" href=""
+                ><i class="fa-solid fa-list"></i>
+                <p>My Music</p>
+              </a>
+            </div>
+            <div class="col-lg-12 col-xl-6 content__btn--item">
+              <a class="btn mt--rps" href=""
+                ><i class="fa-solid fa-heart"></i>
+                <p>Favourites</p>
+              </a>
+              <a class="btn mt-4" href=""
+                ><i class="fa-solid fa-folder-open"></i>
+                <p>Album</p>
+              </a>
+            </div>
+          </div>
+          <div class="item__topMusic">
+            <a class="btn trending__music" href="">
+              <p>Trending Songs</p>
+              <h5>100+</h5>
+            </a>
+            <a class="btn new__music" href="">
+              <p>New Releases</p>
+              <h5>100+</h5>
+            </a>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-6 content__item--listMusic">
+          <p class="list__title">
+            <i class="fa-solid fa-compact-disc"></i>
+            Trending Songs
+          </p>
+          <div class="music__list--item" id="musicList"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- my js -->
+    <script src="../controllers/index.js"></script>
+    <script src="../controllers/data.js"></script>
+    <script src="../models/models.js"></script>
+  </body>
+</html>

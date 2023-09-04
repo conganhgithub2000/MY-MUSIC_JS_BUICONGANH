@@ -1,0 +1,381 @@
+body {
+  background: #1f2833;
+  height: 100vh;
+  color: #fff;
+}
+
+header .navbar {
+  padding: 8px 0;
+}
+header .navbar .navbar-brand {
+  margin-right: 50px;
+  color: #66fcf1;
+  font-size: 32px;
+  font-weight: 800;
+  transition: all 0.5s;
+}
+header .navbar .navbar-brand:hover {
+  color: #00ff7f;
+}
+header .navbar .navbar-toggler {
+  color: #66fcf1;
+  border: 1px solid #66fcf1;
+  padding: 10px 10px 2px;
+}
+@media screen and (max-width: 1200px) {
+  header .navbar .navbar-collapse {
+    justify-content: flex-end;
+  }
+}
+header .navbar .navbar-collapse .navbar-nav .nav-item a {
+  color: #66fcf1;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+header .navbar .navbar-collapse .navbar-nav .nav-item a:hover {
+  color: #00ff7f;
+}
+@media screen and (max-width: 1200px) {
+  header .navbar .navbar-collapse .navbar-nav {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  header .navbar .navbar-collapse .navbar-nav {
+    display: block;
+  }
+}
+header .navbar .navbar-collapse .navbar__search {
+  overflow: hidden;
+  border-radius: 8px;
+  display: flex;
+}
+header .navbar .navbar-collapse .navbar__search .input__search {
+  width: 300px;
+  border-radius: 0;
+  margin-right: 0;
+}
+header .navbar .navbar-collapse .navbar__search .btn {
+  background-color: #45a29e;
+  color: #fff;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+header .navbar .navbar-collapse .header__btn .btn__login,
+header .navbar .navbar-collapse .header__btn .btn__signup {
+  color: #fff;
+  background-color: #45a29e;
+  transition: all 0.7s;
+}
+header .navbar .navbar-collapse .header__btn .btn__login:hover,
+header .navbar .navbar-collapse .header__btn .btn__signup:hover {
+  color: #0b0c10;
+  background-color: #7fffd4;
+}
+
+.content .content__item {
+  margin-top: 20px;
+}
+.content .content__item .content__item--playMusic {
+  padding-left: 0;
+}
+.content .content__item .content__item--playMusic .item__playMusic--top {
+  border-radius: 20px;
+  overflow: hidden;
+}
+.content .content__item .content__item--playMusic .item__playMusic--top .playMusic__img {
+  position: relative;
+}
+.content .content__item .content__item--playMusic .item__playMusic--top .playMusic__img img {
+  width: 100%;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.content .content__item .content__item--playMusic .item__playMusic--top .playMusic__img .title__name--song {
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  background-color: rgba(31, 40, 51, 0.6);
+  width: 100%;
+  padding-top: 16px;
+  overflow: hidden;
+  height: 80px;
+}
+.content .content__item .content__item--playMusic .item__playMusic--top .playMusic__img .title__name--song h6,
+.content .content__item .content__item--playMusic .item__playMusic--top .playMusic__img .title__name--song p {
+  margin-left: 34px;
+  color: #66fcf1;
+}
+@media screen and (max-width: 768px) {
+  .content .content__item .content__item--playMusic .item__playMusic--top .playMusic__img .title__name--song h6,
+  .content .content__item .content__item--playMusic .item__playMusic--top .playMusic__img .title__name--song p {
+    margin-left: 10px;
+  }
+}
+.content .content__item .content__item--playMusic .item__playMusic--top .playMusic__start {
+  background-color: #45a29e;
+}
+.content .content__item .content__item--playMusic .item__playMusic--top .playMusic__start .song-slider {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 14px;
+}
+.content .content__item .content__item--playMusic .item__playMusic--top .playMusic__start .song-slider .slider {
+  width: 390px;
+  -webkit-appearance: none;
+  height: 8px;
+  transition: all 0.5s;
+}
+.content .content__item .content__item--playMusic .item__playMusic--top .playMusic__start .song-slider .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #00ff7f;
+  cursor: pointer;
+}
+.content .content__item .content__item--playMusic .item__playMusic--top .playMusic__start .song-slider .slider:hover {
+  opacity: 0.7;
+}
+@media screen and (max-width: 1200px) {
+  .content .content__item .content__item--playMusic .item__playMusic--top .playMusic__start .song-slider {
+    width: 380px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 992px) {
+  .content .content__item .content__item--playMusic .item__playMusic--top .playMusic__start .song-slider {
+    width: 310px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .content .content__item .content__item--playMusic .item__playMusic--top .playMusic__start .song-slider {
+    width: 200px;
+  }
+}
+.content .content__item .content__item--playMusic .item__playMusic--top .playMusic__start .songs__playItem {
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 520px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1200px) {
+  .content .content__item .content__item--playMusic .item__playMusic--top .playMusic__start .songs__playItem {
+    width: 420px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .content .content__item .content__item--playMusic .item__playMusic--top .playMusic__start .songs__playItem {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .content .content__item .content__item--playMusic .item__playMusic--top .playMusic__start .songs__playItem {
+    width: 230px;
+  }
+}
+.content .content__item .content__item--playMusic .item__playMusic--top .playMusic__start .songs__playItem button {
+  color: #fff;
+}
+.content .content__item .content__item--playMusic .item__playMusic--top .playMusic__start .songs__playItem button:hover, .content .content__item .content__item--playMusic .item__playMusic--top .playMusic__start .songs__playItem button.active {
+  color: #66fcf1;
+}
+.content .content__item .content__item--playMusic .item__playMusic--top .playMusic__start .songs__playItem button i {
+  font-size: 20px;
+  transition: all 0.5s;
+}
+@media screen and (max-width: 768px) {
+  .content .content__item .content__item--playMusic .item__playMusic--top .playMusic__start .songs__playItem button i {
+    font-size: 10px;
+  }
+}
+.content .content__item .content__item--playMusic .item__playMusic--top .playMusic__start .songs__playItem .songs__play button i {
+  font-size: 34px;
+}
+@media screen and (max-width: 768px) {
+  .content .content__item .content__item--playMusic .item__playMusic--top .playMusic__start .songs__playItem .songs__play button i {
+    font-size: 20px;
+  }
+}
+.content .content__item .content__item--playMusic .item__playMusic--top .playMusic__start .songs__playItem .songs__play .btn__play {
+  margin: 10px;
+}
+@media screen and (max-width: 768px) {
+  .content .content__item .content__item--playMusic .item__playMusic--top .playMusic__start .songs__playItem .songs__play .btn__play {
+    margin: 0px;
+  }
+}
+.content .content__item .content__item--playMusic .item__playMusic--bottom {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+.content .content__item .content__item--playMusic .item__playMusic--bottom .item__btnBottom {
+  text-align: center;
+}
+.content .content__item .content__item--playMusic .item__playMusic--bottom .item__btnBottom a {
+  font-size: 30px;
+  background-color: rgba(69, 162, 158, 0.3);
+  color: #66fcf1;
+  width: 80px;
+  border-radius: 14px;
+  margin: 10px;
+  transition: all 0.5s;
+}
+.content .content__item .content__item--playMusic .item__playMusic--bottom .item__btnBottom a:hover {
+  background-color: #45a29e;
+}
+@media screen and (max-width: 992px) {
+  .content .content__item .content__item--playMusic .item__playMusic--bottom .item__btnBottom--lyrical,
+  .content .content__item .content__item--playMusic .item__playMusic--bottom .item__btnBottom--podcast {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .content .content__item .content__item--playMusic .item__playMusic--bottom .item__btnBottom--old {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  .content .content__item .content__item--userMusic {
+    display: none;
+  }
+}
+.content .content__item .content__item--userMusic .content__btn .content__btn--item a {
+  border: 2px solid #45a29e;
+  color: #fff;
+  background-color: transparent;
+  width: 110px;
+  border-radius: 8px;
+  transition: all 0.5s;
+}
+@media screen and (max-width: 1200px) {
+  .content .content__item .content__item--userMusic .content__btn .content__btn--item a {
+    width: 100%;
+  }
+}
+.content .content__item .content__item--userMusic .content__btn .content__btn--item a i {
+  margin-top: 8px;
+}
+.content .content__item .content__item--userMusic .content__btn .content__btn--item a p {
+  margin: 4px 0 8px;
+}
+.content .content__item .content__item--userMusic .content__btn .content__btn--item a:hover {
+  background-color: #45a29e;
+}
+@media screen and (max-width: 1200px) {
+  .content .content__item .content__item--userMusic .content__btn .content__btn--item .mt--rps {
+    margin-top: 24px;
+  }
+}
+.content .content__item .content__item--userMusic .item__topMusic .trending__music {
+  background-image: url(/assets/img/trending.jpg);
+}
+.content .content__item .content__item--userMusic .item__topMusic .new__music {
+  background-image: url(/assets/img/newMusic.jpg);
+}
+.content .content__item .content__item--userMusic .item__topMusic a {
+  color: #66fcf1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+  border-radius: 20px;
+  margin-top: 30px;
+  text-align: left;
+}
+.content .content__item .content__item--userMusic .item__topMusic a p {
+  margin: 10px 10px 4px;
+}
+.content .content__item .content__item--userMusic .item__topMusic a h5 {
+  margin: 4px 10px;
+  font-weight: 700;
+}
+@media screen and (max-width: 1200px) {
+  .content .content__item .content__item--userMusic .item__topMusic a {
+    height: 100px;
+    color: #00ff7f;
+  }
+}
+.content .content__item .content__item--listMusic {
+  background-color: #45a29e;
+  border-radius: 14px;
+  max-height: 640px;
+  overflow-y: auto;
+  position: relative;
+}
+.content .content__item .content__item--listMusic::-webkit-scrollbar {
+  width: 0px;
+}
+.content .content__item .content__item--listMusic .list__title {
+  color: #fff;
+  background-color: #45a29e;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 12px 4px;
+  position: sticky;
+  top: 12px;
+  left: 0;
+}
+.content .content__item .content__item--listMusic .list__title::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 18px;
+  top: -14px;
+  left: 0;
+  position: absolute;
+  background-color: #45a29e;
+}
+.content .content__item .content__item--listMusic .list__title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #66fcf1;
+  margin-top: 6px;
+}
+.content .content__item .content__item--listMusic .list__title i {
+  font-size: 25px;
+}
+.content .content__item .content__item--listMusic .music__list--item .music__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  color: #0b0c10;
+  transition: all 0.5s;
+}
+.content .content__item .content__item--listMusic .music__list--item .music__item:hover, .content .content__item .content__item--listMusic .music__list--item .music__item.active {
+  color: #66fcf1;
+  background-color: rgba(31, 40, 51, 0.5);
+  border-radius: 8px;
+}
+.content .content__item .content__item--listMusic .music__list--item .music__item .music_item--left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+.content .content__item .content__item--listMusic .music__list--item .music__item i {
+  font-size: 26px;
+  transition: all 0.5s;
+}
+.content .content__item .content__item--listMusic .music__list--item .music__item i:hover {
+  color: #66fcf1;
+  background-color: rgba(31, 40, 51, 0.5);
+  border-radius: 8px;
+}
+.content .content__item .content__item--listMusic .music__list--item .music__item .icon__playList {
+  color: #fff;
+}
+.content .content__item .content__item--listMusic .music__list--item .music__item .item__iconPlay {
+  margin-left: 50px;
+}/*# sourceMappingURL=index.css.map */
