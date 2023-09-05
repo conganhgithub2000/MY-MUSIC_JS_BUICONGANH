@@ -178,5 +178,7 @@ function handleChangeBar() {
 }
 
 window.onload = function () {
+  RenderPlayMusic(0);
+  playPause();
   renderListMusic(arrSong);
 };
