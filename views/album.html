@@ -25,12 +25,12 @@
       referrerpolicy="no-referrer"
     />
     <!-- my css -->
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="../css/index.css" />
   </head>
   <body>
     <header>
       <nav class="container navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="../index.html">
           <i class="fa-solid fa-music"></i>
           <span>MUSIC</span>
         </a>
@@ -51,16 +51,18 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a style="color: #00ff7f" class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="../index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./views/mymusic.html">My Music</a>
+              <a class="nav-link" href="./mymusic.html">My Music</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./views/favourites.html">Favourites</a>
+              <a class="nav-link" href="./favourites.html">Favourites</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./views/album.html">Album</a>
+              <a style="color: #00ff7f" class="nav-link" href="./album.html"
+                >Album</a
+              >
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0 navbar__search">
@@ -129,67 +131,27 @@
           </div>
           <div class="item__playMusic--bottom">
             <div class="item__btnBottom">
-              <a class="btn" href=""><i class="fa-solid fa-radio"></i></a>
-              <p class="text-light">Radio</p>
-            </div>
-            <div class="item__btnBottom item__btnBottom--podcast">
-              <a class="btn" href=""><i class="fa-solid fa-microphone"></i></a>
-              <p class="text-light">Podcast</p>
-            </div>
-            <div class="item__btnBottom item__btnBottom--old">
-              <a class="btn" href=""><i class="fa-solid fa-sliders"></i></a>
-              <p class="text-light">90s Old</p>
+              <a class="btn" href="./mymusic.html"
+                ><i class="fa-solid fa-list"></i
+              ></a>
+              <p class="text-light">My Music</p>
             </div>
             <div class="item__btnBottom">
-              <a class="btn" href=""><i class="fa-brands fa-napster"></i></a>
-              <p class="text-light">Artist</p>
-            </div>
-            <div class="item__btnBottom item__btnBottom--lyrical">
-              <a class="btn" href=""
-                ><i class="fa-regular fa-rectangle-list"></i
+              <a class="btn" href="./favourites.html"
+                ><i class="fa-solid fa-heart"></i
               ></a>
-              <p class="text-light">Lyrical</p>
+              <p class="text-light">Favourites</p>
+            </div>
+            <div class="item__btnBottom item__btnBottom--old">
+              <a class="btn" href=""><i class="fa-solid fa-folder-open"></i></a>
+              <p class="text-light">Album</p>
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-lg-2 content__item--userMusic">
-          <div class="content__btn row">
-            <div class="col-lg-12 col-xl-6 content__btn--item">
-              <a class="btn" href="">
-                <i class="fa-solid fa-clock-rotate-left"></i>
-                <p>Recent List</p>
-              </a>
-              <a class="btn mt-4" href="./views/mymusic.html"
-                ><i class="fa-solid fa-list"></i>
-                <p>My Music</p>
-              </a>
-            </div>
-            <div class="col-lg-12 col-xl-6 content__btn--item">
-              <a class="btn mt--rps" href="./views/favourites.html"
-                ><i class="fa-solid fa-heart"></i>
-                <p>Favourites</p>
-              </a>
-              <a class="btn mt-4" href="./views/album.html"
-                ><i class="fa-solid fa-folder-open"></i>
-                <p>Album</p>
-              </a>
-            </div>
-          </div>
-          <div class="item__topMusic">
-            <a class="btn trending__music" href="">
-              <p>Trending Songs</p>
-              <h5>100+</h5>
-            </a>
-            <a class="btn new__music" href="">
-              <p>New Releases</p>
-              <h5>100+</h5>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-6 content__item--listMusic">
-          <p class="list__title">
+        <div class="col-6 content__item--listMusic">
+          <p class="list__title text-center">
             <i class="fa-solid fa-compact-disc"></i>
-            Trending Songs
+            Album
           </p>
           <div class="music__list--item" id="musicList"></div>
         </div>
@@ -213,8 +175,8 @@
       crossorigin="anonymous"
     ></script>
     <!-- my js -->
-    <script src="./controllers/index.js"></script>
-    <script src="./controllers/data.js"></script>
-    <script src="./models/models.js"></script>
+    <script src="../controllers/index.js"></script>
+    <script src="../controllers/data.js"></script>
+    <script src="../models/models.js"></script>
   </body>
 </html>

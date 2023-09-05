@@ -181,7 +181,7 @@ function handleChangeBar() {
 
 //giới hạn số lượng chữ xuất hiện
 function convertName(name) {
-  let maxLength = 18;
+  let maxLength = 50;
   if (name.length > maxLength) {
     return name.slice(0, maxLength) + "...";
   } else {
