@@ -98,6 +98,8 @@ function RenderPlayMusic(indexMusic) {
       audioSong.play();
       playBtn.innerHTML = `<i class="fa-solid fa-circle-pause"></i>`;
       isPlaying = false;
+    } else if (isRandom) {
+      randomMusic(indexSong);
     } else {
       indexSong >= arrSong.length ? (indexSong = 0) : indexSong++;
       nextPrevSong(indexSong);
