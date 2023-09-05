@@ -35,7 +35,7 @@ function playPause() {
 }
 
 // khi chuyển bài hát sẽ render song ra màn hình và play song
-function nextPrevSong(arrSong, indexSong) {
+function nextPrevSong(indexSong) {
   let playHTML = "";
   playHTML += `
                 <h6>Name : ${arrSong[indexSong].name}</h6>
@@ -51,14 +51,40 @@ function nextPrevSong(arrSong, indexSong) {
   playBtn.innerHTML = `<i class="fa-solid fa-circle-pause"></i>`;
   isPlaying = false;
 }
+// khi chuyển bài hát sẽ render song ra màn hình và play song
+//favourites
+function nextPrevSongFavourites(indexSong) {
+  let playHTML = "";
+  playHTML += `
+                <h6>Name : ${arrFavourites[indexSong].name}</h6>
+                <p>Singer : ${arrFavourites[indexSong].singer}</p>
+    `;
+  document.querySelector("#titleNameSong").innerHTML = playHTML;
+
+  imgMusic.setAttribute("src", arrFavourites[indexSong].image);
+  audioSong.setAttribute("src", arrFavourites[indexSong].audio);
+
+  //khi click vào bài hát thì nó sẻ tự động phát và đổi icon
+  audioSong.play();
+  playBtn.innerHTML = `<i class="fa-solid fa-circle-pause"></i>`;
+  isPlaying = false;
+}
 
 //random bài hát
-function randomMusic(arrSong, indexSong) {
+function randomMusic(indexSong) {
   let newIndex;
   do {
     newIndex = Math.floor(Math.random() * arrSong.length);
   } while (newIndex === indexSong);
   nextPrevSong(newIndex);
+}
+//random bài hát Favourites
+function randomMusicFavourites(indexSong) {
+  let newIndex;
+  do {
+    newIndex = Math.floor(Math.random() * arrFavourites.length);
+  } while (newIndex === indexSong);
+  nextPrevSongFavourites(newIndex);
 }
 
 //thêm bài hát vào arr favourites
@@ -109,19 +135,19 @@ function RenderPlayMusicFavourites(indexMusic) {
   // chuyển tới bài hát tiếp theo
   nextBtn.onclick = function () {
     if (isRandom) {
-      randomMusic(arrFavourites, indexSong);
+      randomMusicFavourites(indexSong);
     } else {
       indexSong >= arrFavourites.length ? (indexSong = 0) : indexSong++;
-      nextPrevSong(arrFavourites, indexSong);
+      nextPrevSongFavourites(indexSong);
     }
   };
   // trở lại bài hát trước đó
   prevBtn.onclick = function () {
     indexSong < 0 ? (indexSong = arrFavourites.length - 1) : indexSong--;
     if (isRandom) {
-      randomMusic(arrFavourites, indexSong);
+      randomMusicFavourites(indexSong);
     } else {
-      nextPrevSong(arrFavourites, indexSong);
+      nextPrevSongFavourites(indexSong);
     }
   };
   // khi kết thức 1 bài hát thì nó sẽ tự phát bài hát tiếp theo
@@ -131,10 +157,10 @@ function RenderPlayMusicFavourites(indexMusic) {
       playBtn.innerHTML = `<i class="fa-solid fa-circle-pause"></i>`;
       isPlaying = false;
     } else if (isRandom) {
-      randomMusic(indexSong);
+      randomMusicFavourites(indexSong);
     } else {
       indexSong >= arrFavourites.length ? (indexSong = 0) : indexSong++;
-      nextPrevSong(arrFavourites, indexSong);
+      nextPrevSongFavourites(indexSong);
     }
   };
   //xử lý onclick random
@@ -178,19 +204,19 @@ function RenderPlayMusic(indexMusic) {
   // chuyển tới bài hát tiếp theo
   nextBtn.onclick = function () {
     if (isRandom) {
-      randomMusic(arrSong, indexSong);
+      randomMusic(indexSong);
     } else {
       indexSong >= arrSong.length ? (indexSong = 0) : indexSong++;
-      nextPrevSong(arrSong, indexSong);
+      nextPrevSong(indexSong);
     }
   };
   // trở lại bài hát trước đó
   prevBtn.onclick = function () {
     indexSong < 0 ? (indexSong = arrSong.length - 1) : indexSong--;
     if (isRandom) {
-      randomMusic(arrSong, indexSong);
+      randomMusic(indexSong);
     } else {
-      nextPrevSong(arrSong, indexSong);
+      nextPrevSong(indexSong);
     }
   };
   // khi kết thức 1 bài hát thì nó sẽ tự phát bài hát tiếp theo
@@ -200,10 +226,10 @@ function RenderPlayMusic(indexMusic) {
       playBtn.innerHTML = `<i class="fa-solid fa-circle-pause"></i>`;
       isPlaying = false;
     } else if (isRandom) {
-      randomMusic(arrSong, indexSong);
+      randomMusic(indexSong);
     } else {
       indexSong >= arrSong.length ? (indexSong = 0) : indexSong++;
-      nextPrevSong(arrSong, indexSong);
+      nextPrevSong(indexSong);
     }
   };
   //xử lý onclick random
