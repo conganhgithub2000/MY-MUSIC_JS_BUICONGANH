@@ -127,8 +127,8 @@ function renderListMusic(arrMusic) {
               <div class="music_item--left">
                 <i class="ml-2 fa-solid fa-ellipsis-vertical"></i>
                 <div class="music__item--text ml-2">
-                  <h6 class="mb-0">${music.name}</h6>
-                  <p class="mb-0">${music.singer}</p>
+                  <h6 class="mb-0">${convertName(music.name)}</h6>
+                  <p class="mb-0">${convertName(music.singer)}</p>
                 </div>
               </div>
               <i class="ml-3 mr-2 icon__playList fa-regular fa-circle-play"></i>
@@ -177,6 +177,16 @@ function formatTime(number) {
 rangeBar.addEventListener("change", handleChangeBar);
 function handleChangeBar() {
   audioSong.currentTime = rangeBar.value;
+}
+
+//giới hạn số lượng chữ xuất hiện
+function convertName(name) {
+  let maxLength = 18;
+  if (name.length > maxLength) {
+    return name.slice(0, maxLength) + "...";
+  } else {
+    return name;
+  }
 }
 
 window.onload = function () {
