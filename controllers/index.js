@@ -123,7 +123,7 @@ function RenderPlayMusicFavourites(indexMusic) {
   // thêm bài hát vào mục yêu thích
   favouritesBtn.onclick = function () {
     arrFavourites.splice(arrFavourites[indexSong], 1);
-    saveStorageArrSinhVien();
+    saveStorageArr();
     audioSong.ended();
   };
 
@@ -193,7 +193,7 @@ function RenderPlayMusic(indexMusic) {
     isFavourites = !isFavourites;
     favouritesBtn.classList.toggle("active", isFavourites);
     arrFavourites.push(arrSong[indexSong]);
-    saveStorageArrSinhVien();
+    saveStorageArr();
   };
 
   //khi click vào bài hát thì nó sẻ tự động phát và đổi icon
@@ -317,7 +317,7 @@ function convertName(name) {
 }
 
 //Phương thức lưu vào application storage
-function saveStorageArrSinhVien() {
+function saveStorageArr() {
   //Chuyển arr về chuỗi
   var strFavourites = JSON.stringify(arrFavourites); // '[{},{},{}]'
   //Lưu string vào storage
@@ -336,6 +336,22 @@ function getStorageJSON(name) {
   }
   return null;
 }
+
+document.querySelector("#keyword").oninput = function (event) {
+  var tuKhoa = event.target.value;
+  var arrSearch = [];
+  for (index = 0; index < arrSong.length; index++) {
+    var namePhone = arrSong[index].name;
+
+    tuKhoa = stringToSlug(tuKhoa); //đổi từ chữ HOA --> thường
+    namePhone = stringToSlug(namePhone); //đổi từ chữ HOA --> thường
+
+    if (namePhone.search(tuKhoa) !== -1) {
+      arrSearch.push(arrSong[index]);
+    }
+  }
+  renderListMusic(arrSearch);
+};
 
 window.onload = function () {
   RenderPlayMusic(0);
