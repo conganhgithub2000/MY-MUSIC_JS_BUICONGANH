@@ -120,10 +120,11 @@ function RenderPlayMusicFavourites(indexMusic) {
   audioSong.setAttribute("src", arrFavourites[indexMusic].audio);
   document.querySelector("#titleNameSong").innerHTML = playHTML;
 
-  // thêm bài hát vào mục yêu thích
+  // xóa bài hát khỏi mục yêu thích
   favouritesBtn.onclick = function () {
-    arrFavourites.splice(arrFavourites[indexSong], 1);
+    arrFavourites.splice(indexSong, 1);
     saveStorageArr();
+    RenderFavourites(arrFavourites);
     audioSong.ended();
   };
 
@@ -190,8 +191,6 @@ function RenderPlayMusic(indexMusic) {
 
   //thêm bài hát vào mục yêu thích
   favouritesBtn.onclick = function () {
-    isFavourites = !isFavourites;
-    favouritesBtn.classList.toggle("active", isFavourites);
     arrFavourites.push(arrSong[indexSong]);
     saveStorageArr();
   };
@@ -336,7 +335,7 @@ function getStorageJSON(name) {
   }
   return null;
 }
-
+//tìm kiếm bài hát
 document.querySelector("#keyword").oninput = function (event) {
   var tuKhoa = event.target.value;
   var arrSearch = [];
